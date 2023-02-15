@@ -11,6 +11,7 @@ int registro() //função responsável pelo cadastro de novos usuários
 	char nome[40];
 	char sobrenome[40];
 	char cargo[40];
+	int opcao=0;
 	//fim de criação de variáveis/strings
 	
 	
@@ -69,7 +70,21 @@ int registro() //função responsável pelo cadastro de novos usuários
 	fprintf(file,cargo);	
 	fclose(file);
 	//fim de colocação de vírgula e salvamento de cargo no arquivo
+	system("cls");
+	printf("Usuário Cadastrado com sucesso! Deseja registrar outro?\n\n\n \t1-Registrar outro usuário\n\tDigitar outro número retornará ao menu.\n\n\n"); //opção de retorno ao menu ou novo cadastro
+	scanf("%d", &opcao);
+	
+	switch(opcao)
+	{case 1:
+	registro();
+	break;
+	
+	default:
+	main();
+	break;
+	}
 }
+
 
 int consulta() //função responsável pela busca por usuários
 {
@@ -79,6 +94,7 @@ int consulta() //função responsável pela busca por usuários
 	//inicio de criação de variáveis/strings
 	char cpf[40];
 	char conteudo[200];
+	int opcao=0;
 	//fim de criação de variáveis/strings
 	
 	
@@ -103,6 +119,19 @@ int consulta() //função responsável pela busca por usuários
 	}
 
 	system("pause");
+	system("cls");
+	printf("Deseja consultar outro usuário?\n\n\n \t1-Consultar outro usuário\n\tDigitar outro número retornará ao menu.\n\n\n"); //opção de retorno ao menu ou nova consulta
+	scanf("%d", &opcao);
+	
+	switch(opcao)
+	{case 1:
+	consulta();
+	break;
+	
+	default:
+	main();
+	break;
+	}
 	
 }
 
@@ -113,6 +142,7 @@ int deletar() //Função responsável por deletar alunos
 	char cpf[40];
 	char conteudo[200];
 	int opcao=0;
+	int opcao2=0;
 	//fim de criação de variáveis/strings
 	
 	
@@ -164,6 +194,20 @@ int deletar() //Função responsável por deletar alunos
 				
 	}	}
 	//Fim do que ocorre se o arquivo existir:
+	
+	system("cls");
+	printf("Deseja deletar outro usuário?\n\n\n \t1-Deletar outro usuário\n\tDigitar outro número retornará ao menu.\n\n\n"); //opção de retorno ao menu ou nova exclusão
+	scanf("%d", &opcao2);
+	
+	switch(opcao2)
+	{case 1:
+	deletar();
+	break;
+	
+	default:
+	main();
+	break;
+	}
 } 
 
 
