@@ -229,7 +229,8 @@ int main() //ponto de partida, tela inicial.
 		printf("Escolha a opção desejada do menu:\n\n"); //é possivel fazer numa única linha, com \n já pula para uma próxima linha
 		printf("\t1- Registrar novo usuário.\n");
 		printf("\t2- Realizar consulta por usuário.\n");
-		printf("\t3- Deletar usuário do banco de dados.\n\n\n \tOpção: "); // Fim do menu
+		printf("\t3- Deletar usuário do banco de dados.\n"); 
+		printf("\t4- Sair do sistema. \n\n\n \tOpção:");// Fim do menu
 		//fim da Lista de opções
 		
 		scanf("%d", &opcao); //escaneia o que o usuário responde. Armazene na variavel (%d) opção
@@ -254,6 +255,11 @@ int main() //ponto de partida, tela inicial.
 			printf("Você escolheu deletar um usuário do banco de dados.\n\n\n");
 			system("pause");
 			deletar();
+			break;
+			
+			case 4: //se escolher 4
+			printf("Obrigado por utilizar nosso sistema!!\n\n\n");
+			return 0;
 			break;
 			
 			default: //se escolher uma opção inexistente
