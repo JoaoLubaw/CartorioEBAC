@@ -217,58 +217,73 @@ int main() //ponto de partida, tela inicial.
 {
 	int opcao=0; // Definição de variável. Numero inteiro opção vale 0, este espaço é nosso.
 	int laco=1; //mantem laco como 1 
+	char senhadigitada[10]="a";
+	int comparacao;
+	setlocale (LC_ALL, "Portuguese"); //todas as linguagens de texto são em português e ele acha os acentos na biblioteca.
+	 
+	printf("\t\tCartório da EBAC\n\n");
+	printf("Login de administrador \n\nDigite sua senha: ");
+	scanf("%s",&senhadigitada); //reconhecer a senha digitada
 	
-	for(laco=1;laco=1;) //usuário só vai sair quando fechar 
+	comparacao = strcmp(senhadigitada, "admin");
+		
+	if(comparacao == 0) //se a senha for admin ...
 	{
-
-		system("cls"); //limpeza de tela
-		setlocale (LC_ALL, "Portuguese"); //todas as linguagens de texto são em português e ele acha os acentos na biblioteca.
-
-		//inicio da Lista de opções
-		printf("\t\tCartório da EBAC\n\n");
-		printf("Escolha a opção desejada do menu:\n\n"); //é possivel fazer numa única linha, com \n já pula para uma próxima linha
-		printf("\t1- Registrar novo usuário.\n");
-		printf("\t2- Realizar consulta por usuário.\n");
-		printf("\t3- Deletar usuário do banco de dados.\n"); 
-		printf("\t4- Sair do sistema. \n\n\n \tOpção:");// Fim do menu
-		//fim da Lista de opções
-		
-		scanf("%d", &opcao); //escaneia o que o usuário responde. Armazene na variavel (%d) opção
-	
-		system("cls");
-	
-		switch(opcao) //Prossegue com o sistema conforme escolha de utilizador
+		for(laco=1;laco=1;) //usuário só vai sair quando fechar 
 		{
-			case 1: //se escolher 1 
-			printf("Você escolheu registrar um novo usuário.\n\n\n");
-			system("pause");
-			registro();
-			break;
-			
-			case 2: //se escolher 2 
-			printf("Você escolheu realizar consulta por um usuário.\n\n\n");
-			system("pause");
-			consulta();
-			break;
-			 
-			case 3: //se escolher 3
-			printf("Você escolheu deletar um usuário do banco de dados.\n\n\n");
-			system("pause");
-			deletar();
-			break;
-			
-			case 4: //se escolher 4
-			printf("Obrigado por utilizar nosso sistema!!\n\n\n");
-			return 0;
-			break;
-			
-			default: //se escolher uma opção inexistente
-			printf("Hmmmm...Essa não parece com uma das opções...\n\n\n");
-			system("pause");
-			break;
-		}	
-	}
+
+			system("cls"); //limpeza de tela
+
+			printf("\t\tCartório da EBAC\n\n");
+			//inicio da Lista de opções
+			printf("Escolha a opção desejada do menu:\n\n"); //é possivel fazer numa única linha, com \n já pula para uma próxima linha
+			printf("\t1- Registrar novo usuário.\n");
+			printf("\t2- Realizar consulta por usuário.\n");
+			printf("\t3- Deletar usuário do banco de dados.\n"); 
+			printf("\t4- Sair do sistema. \n\n\n \tOpção:");// Fim do menu
+			//fim da Lista de opções
 		
+			scanf("%d", &opcao); //escaneia o que o usuário responde. Armazene na variavel (%d) opção
+	
+			system("cls");
+	
+			switch(opcao) //Prossegue com o sistema conforme escolha de utilizador
+			{
+				case 1: //se escolher 1 
+				printf("Você escolheu registrar um novo usuário.\n\n\n");
+				system("pause");
+				registro();
+				break;
+				
+				case 2: //se escolher 2 
+				printf("Você escolheu realizar consulta por um usuário.\n\n\n");
+				system("pause");
+				consulta();
+				break;
+					 
+				case 3: //se escolher 3
+				printf("Você escolheu deletar um usuário do banco de dados.\n\n\n");
+				system("pause");
+				deletar();
+				break;
+			
+				case 4: //se escolher 4
+				printf("Obrigado por utilizar nosso sistema!!\n\n\n");
+				return 0;
+				break;
+			
+				default: //se escolher uma opção inexistente
+				printf("Hmmmm...Essa não parece com uma das opções...\n\n\n");
+				system("pause");
+				break;
+			}	
+  		}
+    }
+    
+	else //se for digitada a senha incorreta
+	system("cls");
+	printf("\n\n\nSenha Incorreta\n\n\n");
+  			
 	printf("\n \n \nEsse software é de livre uso da Equipe EBAC \n~Desenvolvido por João Lubawaski"); //assinatura
 }
 
