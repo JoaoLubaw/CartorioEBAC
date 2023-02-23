@@ -80,7 +80,6 @@ int registro() //função responsável pelo cadastro de novos usuários
 	break;
 	
 	default:
-	main();
 	break;
 	}
 }
@@ -129,7 +128,6 @@ int consulta() //função responsável pela busca por usuários
 	break;
 	
 	default:
-	main();
 	break;
 	}
 	
@@ -171,7 +169,7 @@ int deletar() //Função responsável por deletar alunos
 		printf("\nVocê tem certeza que deseja deletar o usuário de CPF:");
 		printf("%s", conteudo); //Exibe as informações de dentro do arquivo
 		fclose(file); //fecha o arquivo
-		printf("?\n\n\n1:Sim.\n\n"); //Pede por confirmação de exclusão
+		printf("?\n\n\n1:Sim.\nPara cancelar pressione outro número. \n\n"); //Pede por confirmação de exclusão
 
 		scanf("%d", &opcao); //procura pela resposta do utilizador
 		
@@ -205,7 +203,6 @@ int deletar() //Função responsável por deletar alunos
 	break;
 	
 	default:
-	main();
 	break;
 	}
 } 
@@ -250,20 +247,14 @@ int main() //ponto de partida, tela inicial.
 			switch(opcao) //Prossegue com o sistema conforme escolha de utilizador
 			{
 				case 1: //se escolher 1 
-				printf("Você escolheu registrar um novo usuário.\n\n\n");
-				system("pause");
 				registro();
 				break;
 				
 				case 2: //se escolher 2 
-				printf("Você escolheu realizar consulta por um usuário.\n\n\n");
-				system("pause");
 				consulta();
 				break;
 					 
 				case 3: //se escolher 3
-				printf("Você escolheu deletar um usuário do banco de dados.\n\n\n");
-				system("pause");
 				deletar();
 				break;
 			
