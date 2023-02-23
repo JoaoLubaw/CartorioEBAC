@@ -1,0 +1,44 @@
+ Int main
+	100% correto
+
+
+	Registro()
+		Inicia e encerra na mesma função - Uma tela de confirmação de saída ou escolha de novo registro é exibida.
+		100% correta
+
+	Consulta()
+		Inicia e encerra na mesma função - Uma tela de confirmação de saída ou escolha de nova consulta é exibida.
+		100% correta
+	
+	Deletar()
+		Em caso de inexistência de usuário uma mensagem é exibida, em caso de existência, uma tela de confirmação é exibida, exibindo as informações do CPF a ser deletado e evitando eliminações acidentais.
+		Inicia e encerra na mesma função
+		100% Correta
+---------------------------------------------------------------
+
+	Login
+		Ocorre corretamente
+
+	
+	Registro
+		Menu funcionou corretamente
+		Arquivo foi criado, com registro de cpf, nome, sobrenome e cargo.
+		Opção de nova inserção ou retorno ao menu funciona corretamente.
+	
+	
+	Consulta
+		Menu funcionou corretamente
+		Consulta de cpf inexistente:Ok
+		Consulta de cpf existente:Ok
+		Opção de nova consulta ou retorno ao menu funciona corretamente.
+
+	Deletar:
+		Menu funcionou corretamente
+		Resultado individual em caso de cpf inexistente: Ok.
+		Resultado em caso de cpf existente, com dados cadastrados de cpf:Ok
+		Confirmação de exclusão:Ok
+		Cancelamento de exclusão:Ok
+		100% Funcional
+	
+	Saída de Sistema:
+		Funcional.
