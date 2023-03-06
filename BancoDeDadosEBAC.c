@@ -116,7 +116,9 @@ int consulta() //função responsável pela busca por usuários
 		printf("%s", conteudo);
 		printf("\n\n");
 	}
-
+	
+	fclose(file);
+	
 	system("pause");
 	system("cls");
 	printf("Deseja consultar outro usuário?\n\n\n \t1-Consultar outro usuário\n\tDigitar outro número retornará ao menu.\n\n\n"); //opção de retorno ao menu ou nova consulta
